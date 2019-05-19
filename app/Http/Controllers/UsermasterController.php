@@ -32,7 +32,7 @@ class UsermasterController extends Controller
 
         'first_name' => 'required',
         'last_name' => 'required',
-        'phone_no' => 'required',
+        'phone_no' => 'required|numeric|min:10|max:10',
         'email' => 'required|email|unique:users,email',
         'password' => 'same:confirm-password',
         'user_img' => 'required|image|mimes:jpeg,png,jpg|max:2048',
@@ -90,8 +90,8 @@ function getUserList() {
                             }
                         })
     ->addColumn('action', function ($query) {
-        return '<a class="btn btn-primary btn-xs text-white useredit" href="user/edit/' . $query->id . '"><i class="fa fa-pencil"></i> Edit</a> '
-        . '<a data-id="' . $query->id . '" data-toggle="modal" data-target="#myModal" class="btn btn-warning btn-xs text-white userdelete"><i class="fa fa-remove"></i> Delete</a>';
+        return '<a class="btn btn-success  text-white useredit" href="user/edit/' . $query->id . '"><i class="fas fa-edit"></i> Edit</a> '
+        . '<a data-id="' . $query->id . '" data-toggle="modal" data-target="#myModal" class="btn btn-danger  text-white userdelete"><i class="fas fa-trash"></i> Delete</a>';
     })->rawColumns(['user_img', 'action'])
     ->make(true);
 }
@@ -115,9 +115,9 @@ public function update(Request $request) {
 
    $this->validate($request, [
 
-    'first_name' => 'required',
-    'last_name' => 'required',
-    'phone_no' => 'required',
+    'first_name' => 'required|min:50|max:50',
+    'last_name' => 'required|min:50|max:50',
+    'phone_no' =>  'required|numeric|min:10|max:10',
     'email' => 'required|email|unique:users,email,'.$id,
     'password' => 'same:confirm-password',
     'user_img' => 'image|mimes:jpeg,png,jpg|max:2048',

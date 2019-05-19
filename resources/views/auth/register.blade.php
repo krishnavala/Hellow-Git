@@ -29,19 +29,19 @@
 
         @endforeach
         @endif 
-                        <input type="text" name="email" placeholder="Email" />
-                         <input type="password" name="password" placeholder="Password" />
-                        <input type="password" name="confirm-password" placeholder="Confirm Password" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input type="text" name="email" maxlength="30" placeholder="Email" />
+                         <input type="password" maxlength="30" name="password" placeholder="Password" />
+                        <input type="password" maxlength="30" name="confirm-password" placeholder="Confirm Password" />
+                        <input type="button" name="next"  class="next action-button" value="Next" />
                     </fieldset>
                     
                     <fieldset>
                         <h2 class="fs-title">Personal Details</h2>
                         
-                        <input type="text" name="first_name" placeholder="First Name" />
-                        <input type="text" name="last_name" placeholder="Last Name" />
-                        <input type="text" name="phone_no" placeholder="Phone" />
-                         <input type="file" name="user_img" id="input-file-now" class="dropify" />
+                        <input type="text"  name="first_name" maxlength="30" placeholder="First Name" />
+                        <input type="text" name="last_name" maxlength="30" placeholder="Last Name" />
+                        <input type="Number" name="phone_no" maxlength="10" placeholder="Phone" />
+                         <input type="file" name="user_img"  id="input-file-now" class="dropify" />
         
                         <div class="form-group m-b-0">
         <div class="col-sm-12 text-center">

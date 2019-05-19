@@ -1,9 +1,8 @@
-x<?php
+<?php
 
 namespace App\Http\Controllers;
-
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Session;
 use Illuminate\Support\Facades\DB;
 use DataTables;
@@ -79,8 +78,8 @@ class RoleController extends Controller {
         ->select('role.*')
         ->where('role.is_active',1);
         return DataTables::of($query)->addColumn('action', function ($query) {
-            return '<a class="btn btn-primary btn-xs text-white roleedit" href="edit/' . $query->role_id . '"><i class="fa fa-pencil"></i> Edit</a> '
-            . '<a data-role_id="' . $query->role_id . '" data-toggle="modal" data-target="#myModal" class="btn btn-warning btn-xs text-white roledelete"><i class="fa fa-remove"></i> Delete</a>';
+            return '<a class="btn btn-success text-white roleedit" href="edit/' . $query->role_id . '"><i class="fas fa-edit"></i> Edit</a> '
+            . '<a data-role_id="' . $query->role_id . '" data-toggle="modal" data-target="#myModal" class="btn btn-danger  text-white roledelete"><i class="fas fa-trash"></i> Delete</a>';
         })
         ->make(true);
     }

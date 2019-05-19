@@ -25,7 +25,7 @@ protected $redirectTo = '/home';
 
         'first_name' => 'required',
         'last_name' => 'required',
-        'phone_no' => 'required',
+        'phone_no' =>  'required|numeric|min:10|max:10',
         'email' => 'required|email|unique:users,email',
         'password' => 'same:confirm-password',
         'user_img' => 'required|image|mimes:jpeg,png,jpg|max:2048',
@@ -57,8 +57,8 @@ protected $redirectTo = '/home';
         )
     );      
 
-    Session::flash('success_msg', 'User Store successfully!');
-    return redirect('/home');
+    Session::flash('success_msg', 'Successfully Registretion Now Please Login!');
+    return redirect('/login');
 
 }
 

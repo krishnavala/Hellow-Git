@@ -65,13 +65,13 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label>First Name<span class="text-danger">*</span></label>
-                <input type="text" name="first_name" class="form-control" placeholder="Enter  Name">
+                <input type="text" name="first_name" maxlength="30" class="form-control" placeholder="Enter  Name">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label>Last Name<span class="text-danger">*</span></label>
-                <input type="text" name="last_name" class="form-control" placeholder="Enter  Name">
+                <input type="text" name="last_name" maxlength="30" class="form-control" placeholder="Enter  Name">
             </div>
         </div>
         
@@ -83,13 +83,13 @@
             <div class="form-group">
                 <label>Password
 <span class="text-danger">*</span></label>
-                <input type="Password" name="password" class="form-control" placeholder="Password">
+                <input type="Password" maxlength="30" name="password" class="form-control" placeholder="Password">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label>Confirm Password<span class="text-danger">*</span></label>
-                <input type="Password" name="confirm-password" class="form-control" placeholder="Confirm Password">
+                <input type="Password" maxlength="30" name="confirm-password" class="form-control" placeholder="Confirm Password">
             </div>
         </div>
         
@@ -111,7 +111,7 @@
             <div class="form-group">
                 <label>Phone No<span class="text-danger">*</span></label>
                 <div class="input-group">
-                    <input type="text" class="form-control" name="phone_no" id="users_price" placeholder="Enter Phone Number">
+                    <input type="Number" class="form-control"  name="phone_no" id="users_price" placeholder="Enter Phone Number">
                     <div class="input-group-append"><span class="input-group-text"><i class="fa fa-phone    "></i></span></div>
                 </div></div>
             </div>

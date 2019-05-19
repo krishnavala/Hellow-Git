@@ -65,14 +65,14 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label>First Name<span class="text-danger">*</span></label>
-                <input type="text" value="{{ $user->first_name}}" name="first_name" class="form-control" placeholder="Enter FirstName">
+                <input type="text" value="{{ $user->first_name}}" maxlength="30" name="first_name" class="form-control" placeholder="Enter FirstName">
                 <input type="hidden" value="{{ $user->id}}" name="id">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label>Last Name<span class="text-danger">*</span></label>
-                <input type="text" value="{{ $user->last_name}}" name="last_name" class="form-control" placeholder="Enter  Name">
+                <input type="text" value="{{ $user->last_name}}" maxlength="30" name="last_name" class="form-control" placeholder="Enter  Name">
             </div>
         </div>
         
@@ -84,13 +84,13 @@
             <div class="form-group">
                 <label>Password
 <span class="text-danger">*</span></label>
-                <input type="Password" name="password" value="" class="form-control" placeholder="Password">
+                <input type="Password" name="password" value="" maxlength="30" class="form-control" placeholder="Password">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label>Confirm Password<span class="text-danger">*</span></label>
-                <input type="text" name="confirm-password" value="" class="form-control" placeholder="Confirm Password">
+                <input type="text" name="confirm-password" maxlength="30" value="" class="form-control" placeholder="Confirm Password">
             </div>
         </div>
         
@@ -124,7 +124,7 @@
         <label>Profile Picture<span class="text-danger">*</span></label>
        
         <input type="file" id="input-file-now-custom-1" name="user_img" class="dropify" data-default-file="{{asset('profile_img/'.$user->user_img) }}" value="{{asset('profile_img/'.$user->user_img) }}" />
-          <input type="text" name="user_img_value" value="{{ $user->user_img }}" /> 
+          <input type="hidden" name="user_img_value" value="{{ $user->user_img }}" /> 
 
        
 </div>

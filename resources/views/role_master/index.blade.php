@@ -45,8 +45,8 @@
             <table id="RoleTable" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th>role ID</th>
-                        <th>role Name</th>
+                        <th>Role ID</th>
+                        <th>Role Name</th>
 
 
                         <th class="text-center">Action</th>
@@ -89,7 +89,6 @@
 
 
 @section('script')
-<script src="{{asset('assets/node_modules/jquery/jquery-3.2.1.min.js')}}"></script>
 
 <script src="{{asset('assets/node_modules/datatables/datatables.min.js')}}"></script>
 <!-- start - This is for export functionality only -->
